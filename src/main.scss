@@ -40,6 +40,7 @@ body {
       position: absolute;
       top: 48px;
       left: -100%;
+      z-index: 2;
       flex-direction: column;
       padding: 25px 40px 60px;
       transition: all 0.4s cubic-bezier(0.4, 0, 0, 1);
@@ -267,6 +268,9 @@ body {
       padding: 0 60px;
       width: 100%;
     }
+    @media screen and (max-width: 500px) {
+      padding: 0 40px;
+    }
     .glide {
       &__slides {
         align-items: center;
@@ -299,6 +303,9 @@ body {
           @media screen and (max-width: 800px) {
             margin: 0 25px 15px;
           }
+          @media screen and (max-width: 800px) {
+            margin: 0 10px 15px;
+          }
         }
         &__name {
           margin-bottom: 10px;
@@ -321,7 +328,14 @@ body {
         height: 40px;
         &:hover {
           border: none;
-          box-shadow: 0 4px 14px 1px rgba(0, 0, 0, 0.1)
+          box-shadow: 0 4px 14px 1px rgba(0, 0, 0, 0.1);
+          @media screen and (max-width: 800px) {
+            box-shadow: none;
+          }
+        }
+        @media screen and (max-width: 500px) {
+          width: 30px;
+          height: 30px;
         }
         &--prev {
           left: -95px;
@@ -329,12 +343,18 @@ body {
           @media screen and (max-width: 800px) {
             left: -50px;
           }
+          @media screen and (max-width: 500px) {
+            left: -35px;
+          }
         }
         &--next {
           right: -95px;
           background: url('./assets/img/arrow_next.png') no-repeat center;
           @media screen and (max-width: 800px) {
             right: -50px;
+          }
+          @media screen and (max-width: 500px) {
+            right: -35px;
           }
         }
       }
